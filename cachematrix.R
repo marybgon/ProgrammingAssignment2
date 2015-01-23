@@ -1,7 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
+## There are two functions that will help a matrix inversion. Matrix inversion is a costly computation so caching its inversion avoid computing it repeatedly
 
-## Write a short comment describing this function
+## This function creates a list of functions that caches the matrix inversion. The function set, sets the value of the matrix. Using the function get we can get the value of the matrix. Function setsolve sets the inversion of the matrix which we can get by the getsolve function
 
 makeCacheMatrix <- function(x = matrix()) {
 	
@@ -18,7 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function check if the inversion matrix is already calculated. If so, it displays the message ("getting cached data") and return the inverted matrix. If not, it calculates the matrix inversion and sets it using setsolve function
 
 cacheSolve <- function(x, ...) {
         m <- x$getsolve()
